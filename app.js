@@ -7,8 +7,8 @@ const boardRouter = require('./routers/boards')
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
-app.use("/api", [userRouter]);
-app.use("/api", [boardRouter]);
+app.use("/api", [userRouter])
+app.use("/api", [boardRouter])
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
