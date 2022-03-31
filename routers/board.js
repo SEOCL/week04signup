@@ -46,7 +46,7 @@ router.post("/board/:boardId", async(req, res)=>{
 
         if(isBoardInDetail.length > 0){
             await Boards.updateOne({boardId}, {$set: {title, name, memo}})
-            res.send({result: "success"})
+            res.send({result: " 완료!"})
         }
         else{
             res.send({result:"비밀번호가 틀렸습니다."})
@@ -67,7 +67,7 @@ router.post("/board/:boardId/delete", async(req, res)=>{
 
         if(isBoardInDetail.length > 0){
             await Boards.deleteOne({boardId})
-            res.send({result: "success"})
+            res.send({result: "완료!"})
         }
         else{
             res.send({result:"비밀번호가 틀렸습니다."})

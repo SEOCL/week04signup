@@ -1,3 +1,8 @@
+//npm i express 
+//npm i jsonwebtoken
+//npm i ejs
+//npm i joi
+
 const express = require("express");
 const app = express();
 const port = 3000;

@@ -54,7 +54,7 @@ router.put("/detail/:writeId", authMiddleware, async (req, res) => {
 
   if (board.userId != res.locals.user.userId) {
     res.status(401).send({
-      errorMessage: "동일한 client 수정 가능합니다.",
+      errorMessage: "동일한 요청 수정 가능합니다.",
     });
     return;
   }
@@ -70,7 +70,7 @@ router.post("/detail/:writeId/delete", authMiddleware, async (req, res) => {
 
   if (board.userId != res.locals.user.userId) {
     res.status(401).send({
-      errorMessage: "동일한 client 수정 가능합니다.",
+      errorMessage: "동일한 요청 수정 가능합니다.",
     });
     return;
   }
